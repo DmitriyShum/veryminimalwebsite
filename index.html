@@ -10,6 +10,17 @@
     <meta name="description" content="Main page for Dmitriy.S.">
 </head>
 <body>
+
+  <div id="cookie-consent" class="cookie-overlay cookie-hidden" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="cookie-panel">
+    <div class="cookie-text">This website uses cookies and third party services to analyze website traffic, and understand the regions of visitors. This help to improve this website in the future. Read the Privacy Policy for more information.</div>
+    <div class="cookie-actions">
+      <button id="cookie-go-back" class="cookie-btn secondary">Go back</button>
+      <button id="cookie-accept" class="cookie-btn">Accept and continue</button>
+    </div>
+  </div>
+</div>
+
 <div class="profile">
     <h2 class="mtext">DHotspot</h2>
     <div class="links">
@@ -33,6 +44,30 @@
 </section>
   </div>
 
-  <footer class="site-footer"><a href="mailto:contact@dhotspot.dev">Contact</a> | <a href="privacypolicy.html">Privacy Policy</a> | © 2025 Dmitriy Shumkin</footer>
+  <div class="blog">
+    <h2 class="mtext">Blog coming soon</h2></div>
+  <footer class="site-footer"><a href="mailto:contact@dhotspot.dev">Contact</a> | <a href="privacypolicy.html", target="_blank">Privacy Policy</a></footer>
+
+<script>
+(function(){
+  var overlay = document.getElementById('cookie-consent');
+  if(!overlay) return;
+  var acceptBtn = document.getElementById('cookie-accept');
+  var goBackBtn = document.getElementById('cookie-go-back');
+  var storageKey = 'dhotspot_cookie_consent';
+  function hide(){ overlay.classList.add('cookie-hidden'); overlay.setAttribute('aria-hidden','true'); }
+  function show(){ overlay.classList.remove('cookie-hidden'); overlay.setAttribute('aria-hidden','false'); }
+  try{
+    if(localStorage.getItem(storageKey) === 'true'){
+      hide();
+    } else {
+      show();
+    }
+  }catch(e){ show(); }
+  if(acceptBtn) acceptBtn.addEventListener('click', function(){ try{ localStorage.setItem(storageKey,'true'); }catch(e){} hide(); });
+  if(goBackBtn) goBackBtn.addEventListener('click', function(){ if(history.length>1){ history.back(); } else { window.location.href = 'about:blank'; } });
+})();
+</script>
+
 </body>
 </html>
