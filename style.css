@@ -4,149 +4,69 @@ html, body {
 }
 
 body{
-    background-color: #222222;
-    display: flex;
-    flex-direction: column;
-    min-height:100vh;
-    align-items: center;
-    justify-content: center;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    color: #fff;
+    background-image:url("images/homemainbg.webp");
+    background-position:initial;
+    background-size:cover;
+    position:sticky;
+}
+.profilebox{
+    background: rgba(0, 0, 0, 0.315); 
+    padding:14px;
+    border-radius:10px; 
+    border:1px solid rgba(255, 0, 0, 0); 
+    box-shadow: 0 8px 20px rgb(0, 0, 0); 
+    margin:200px;
+    text-align: center;
+}
+.profile{
+    border-radius:50%;
+    border: #ffffff;
+    border-style:groove;
+    cursor:none;
+}
+.big{
+    color:rgb(202, 255, 197);
+    font-size: 38px;
+}
+.mtext{
+    padding:14px;
+    color: white;
+    text-shadow:1px 2px black;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing:0.1rex;
+    margin:0px;
+}
+a{
+    padding:10px;
+    background-color: #669966;
+    color:bisque;
+    font-size:18px;
+    text-align: center;
+    text-decoration: none;
+    gap:14px; 
+    justify-content:center;
+}
+a:hover{
+    background-color: #009900;
     
 }
 
-.cookie-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.45);
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-    z-index:9999;
-}
-.cookie-panel{
-    background:#fff;
-    color:#111;
-    max-width:980px;
-    width:100%;
-    padding:16px 20px;
-    border-radius:10px;
-    margin:20px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.25);
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:12px;
-}
-    .cookie-text{
-        flex:1;
-        min-width:200px;
-        font-size:15px;
-    }
-    .cookie-actions{
-        display:flex;
-        gap:8px;
-    }
-    .cookie-btn{
-        padding:10px 14px;
-        border-radius:8px;
-        border:1px solidtransparent;
-        background:#0b63ff;
-        color:#fff;
-        cursor:pointer;
-        font-weight:600;
-    }
-    .cookie-btn.secondary{
-        background:transparent;
-        color:#111;border-color:#cfcfcf
-    }
-    .cookie-hidden{display:none !important
-    }
-    @media (max-width:520px){
-        .cookie-panel{
-            flex-direction:column;
-            align-items:stretch;text-align:center}}
-
-.mtext{
-    color: wheat;
-    margin: 0;
-    font-size: 24px;
-    text-align: center;
-}
-
-.profile{
-    display:flex;
-    flex: 1 0 auto;
-    flex-direction:column;
-    gap:12px;
-    align-items:center;
-    padding: 100px;
-}
-
-.links{ 
-    display:flex; 
-    gap:14px; 
-    align-items:center;
-    justify-content:center;
-}
-.links a{ 
-    color:var(--link-color, wheat); 
-    text-decoration:none; 
-    font-weight:600;
-}
-.links a:hover{ 
-    text-decoration:underline; 
-}
-
-.projects-grid { 
-    display:grid; 
-    gap:14px; 
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); 
-    margin-top:24px; 
-    width:100%;
-}
-.project-card { 
-    background: rgba(255,255,255,0.025); 
-    padding:14px; 
-    border-radius:10px; 
-    border:1px solid rgba(255,255,255,0.03); 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.45); 
-}
-.project-card h3{ 
-    margin:0 0 6px; 
-    font-size:18px;
-}
-.project-card .muted {
-     color:#9aa6b2; 
-     margin:0 0 10px; 
-     font-size:14px; 
-    }
-.project-card .link { 
-    color:#9ad6ff; 
-    text-decoration:none; 
-    font-weight:600;
-}
-.project-card:hover { 
-    transform:translateY(-6px); 
-    transition: transform .22s ease;
-}
-/* Footer styles */
+/* Footer*/
 .site-footer{ 
     flex-shrink: 0;
     text-align:center; 
     color:#9aa6b2; 
     font-size:14px;
     padding: 12px 0px; 
+    bottom:auto;
 }
-
-/* Ensure footer links match the footer color instead of default blue */
 .site-footer a{
     color: #9aa6b2;
     text-decoration: none;
     font-weight: 600;
     text-align: center;
+    bottom:auto;
 }
 .site-footer a:hover{
     color: #ffffff;
