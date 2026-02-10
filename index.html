@@ -10,66 +10,17 @@
     <meta name="description" content="Main page for Dmitriy.S.">
 </head>
 <body>
-
-  <div id="cookie-consent" class="cookie-overlay cookie-hidden" role="dialog" aria-live="polite" aria-label="Cookie consent">
-  <div class="cookie-panel">
-    <div class="cookie-text">This website uses cookies and third party services to analyze website traffic, and understand the regions of visitors. This help to improve this website in the future. Read the Privacy Policy for more information.</div>
-    <div class="cookie-actions">
-      <button id="cookie-go-back" class="cookie-btn secondary">Go back</button>
-      <button id="cookie-accept" class="cookie-btn">Accept and continue</button>
-    </div>
-  </div>
-</div>
-
-<div class="profile">
-    <h2 class="mtext">DHotspot</h2>
-    <div class="links">
-        <a class="mtext" rel="Github" href="https://www.github.com/DmitriyShum">Github</a>
-        <a class="mtext" rel="Mastodon" href="https://mastodon.online/@DHotspot">Mastodon</a>
-    </div>
-    <section id="projects" class="projects-grid">
-  <article class="project-card">
-    <h3>M8Ball (Java)</h3>
-    <p class="muted">Translated from Python to Java, this includes error handling and the full list of responses.</p>
-    <a class="link" href="https://github.com/DmitriyShum/M8Ball">View on GitHub →</a>
-  </article>
-  <article class="project-card">
-    <h3>Fidget Cube App</h3>
-    <p class="muted">A Swift app that simulates a fidget cube with touch interactions.</p>
-    <a class="link" href="https://github.com/DmitriyShum/fidgetcubeapp">View on GitHub →</a>
-  </article>
-        <article class="project-card">
-            <h3>Full Sensor Irrigation</h3>
-            <p class="muted">An Arduino based project that supports an air temperature and humidity sensor, and a soil moisture sensor, displays their data on the screen, and automatically waters the plant.</p>
-            <a class="link" href="https://www.github.com/DmitriyShum/FullSensorIrrigation">View on Github</a>
-        </article>
-</section>
+<div class="profilebox">
+   <img class="profile" src="images/me.jpg" alt="Profile picture of Dmitriy S" width="200" height="200">
+    <h2 class="big">Dmitriy. S</h2>
+    <a rel="Github noopener" href="https://www.github.com/DmitriyShum" target="_blank">Github</a>
+    <a rel="Mastodon noopener" href="https://mastodon.online/@DHotspot" target="_blank">Mastodon</a>
+    <a rel="Email" href="mailto:contact@dhotspot.dev">Contact</a>
+    <p class="mtext">I am a Computer Science student interested in the Information of Technology and Information of Security fields. Over the years of my computer knowledge, I was able to develop a few projects and post them as open source on Github. My goal is to continue to pursue the Information Technology field, and work my way up the position ladder. This website was built to save time from searching for a description of what I do.</p>
   </div>
 
-  <div class="blog">
-    <h2 class="mtext">Blog coming soon</h2></div>
-  <footer class="site-footer"><a href="mailto:contact@dhotspot.dev">Contact</a> | <a href="privacypolicy.html", target="_blank">Privacy Policy</a></footer>
-
-<script>
-(function(){
-  var overlay = document.getElementById('cookie-consent');
-  if(!overlay) return;
-  var acceptBtn = document.getElementById('cookie-accept');
-  var goBackBtn = document.getElementById('cookie-go-back');
-  var storageKey = 'dhotspot_cookie_consent';
-  function hide(){ overlay.classList.add('cookie-hidden'); overlay.setAttribute('aria-hidden','true'); }
-  function show(){ overlay.classList.remove('cookie-hidden'); overlay.setAttribute('aria-hidden','false'); }
-  try{
-    if(localStorage.getItem(storageKey) === 'true'){
-      hide();
-    } else {
-      show();
-    }
-  }catch(e){ show(); }
-  if(acceptBtn) acceptBtn.addEventListener('click', function(){ try{ localStorage.setItem(storageKey,'true'); }catch(e){} hide(); });
-  if(goBackBtn) goBackBtn.addEventListener('click', function(){ if(history.length>1){ history.back(); } else { window.location.href = 'about:blank'; } });
-})();
-</script>
-
+  <footer class="site-footer">
+     <a href="privacypolicy.html" target="_blank">Privacy Policy</a>
+  </footer>
 </body>
 </html>
