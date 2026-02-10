@@ -1,5 +1,6 @@
 @media only screen and (min-width: 740px) {
 body{
+    background-color: #555555;
     background-image:url("images/homemainbg.webp");
     background-position:initial;
     background-size:initial;
@@ -12,6 +13,7 @@ body{
     position:sticky;
 }
 .profilebox{
+    border-radius:20%;
     background: rgba(0, 0, 0, 0.315); 
     padding:14px;
     border-radius:10px; 
