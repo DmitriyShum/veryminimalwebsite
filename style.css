@@ -2,7 +2,6 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
 body{
     background-image:url("images/homemainbg.webp");
     background-position:initial;
@@ -49,9 +48,7 @@ a{
 }
 a:hover{
     background-color: #009900;
-    
 }
-
 /* Footer*/
 .site-footer{ 
     flex-shrink: 0;
